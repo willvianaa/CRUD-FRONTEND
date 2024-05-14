@@ -1,0 +1,8 @@
+<form class="cadastrar-container">
+    <h1>CADASTRAR</h1>
+    <input type="text" #nome>
+    <input type="password" #senha>
+    <input type="text" #cpf>
+    <input type="date" #dataNascimento>
+    <input type="button" value="cadastrar" class="btn" (click)="postUsuario(nome.value, senha.value, cpf.value, dataNascimento.value)">
+</form>
