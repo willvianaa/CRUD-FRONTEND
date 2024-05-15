@@ -1,8 +1,8 @@
 <form class="cadastrar-container">
     <h1>CADASTRAR</h1>
-    <input type="text" #nome value="{{ usuario?.nome }}">
-    <input type="password" #senha value="{{ usuario?.senha }}">
-    <input type="text" #cpf value="{{ usuario?.cpf }}">
+    <input type="text" #nome value="{{ usuario?.nome }}" placeholder="Nome...">
+    <input type="password" #senha value="{{ usuario?.senha }}" placeholder="Senha...">
+    <input type="text" #cpf value="{{ usuario?.cpf }}" placeholder="999.999.999-99">
     <input type="date" #dataNascimento value="{{ usuario?.dataNascimento }}">
     <input type="button" value="cadastrar" class="btn" (click)="postUsuario(nome.value, senha.value, cpf.value, dataNascimento.value)" *ngIf="!usuario">
     <input type="button" value="editar" class="btn" (click)="putUsuario(nome.value, senha.value, cpf.value, dataNascimento.value, usuario?.id)" *ngIf="usuario">
