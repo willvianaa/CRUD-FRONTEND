@@ -32,4 +32,8 @@ export class ListarComponent implements OnInit {
           })
       })
   }
+  editarUsuario(value: string){
+    this.router.navigate(["/cadastrar", value])
+  }
+
 }
