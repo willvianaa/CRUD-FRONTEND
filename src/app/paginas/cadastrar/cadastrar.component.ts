@@ -26,7 +26,7 @@ export class CadastrarComponent implements OnInit{
   
   postUsuario(nome:string , senha:string, cpf:string, dataNascimento:string){
     let userObj:any = {nome: nome, senha: senha, cpf: cpf, dataNascimento: dataNascimento}
-    this.http.post(`http://localhost:8080/bd/criar`,userObj)
+    this.http.post(`http://localhost:8080/bd/usuarios`,userObj)
     .subscribe({
       next: (data: any)=>{
         console.log(data)
